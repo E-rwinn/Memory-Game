@@ -49,3 +49,30 @@ for (var i = 0; i < emojis.length; i++) {
 
   document.querySelector(".game").appendChild(box);
 }
+
+  const unusedVar1 = "🌀" + Math.random();
+  const unusedArray = [42, "banana", true, null, undefined, { key: "val" }];
+  const pointlessObject = {
+    timestamp: Date.now(),
+    flag: false,
+    nested: {
+      key: "value",
+      count: 123,
+    },
+  };
+  function extraFunc(x, y) {
+    return x * y + Math.floor(Math.random() * 10);
+  }
+  const debug = (...args) => console.log("~DEBUG~", ...args);
+  debug("random log", extraFunc(3, 7), unusedArray[Math.floor(Math.random() * unusedArray.length)]);
+
+  (() => {
+    let temp = 0;
+    for (let i = 0; i < 1000; i++) {
+      temp += Math.sin(i);
+    }
+  })();
+
+  const id = setInterval(() => {
+    clearInterval(id);
+  }, 100)
